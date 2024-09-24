@@ -8,7 +8,7 @@ import { Disciplina } from '../models/disciplina';
 })
 export class DisciplinaService {
 
-  URL: string = 'https://localhost:8080/disciplinas'
+  URL: string = 'http://localhost:8080/disciplinas'
 
   constructor(private httpClient: HttpClient) { }
 
