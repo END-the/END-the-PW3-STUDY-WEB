@@ -8,13 +8,17 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+  conexoes : number = 1;
   constructor(private conexaoService: ConexaoService){
-    conexaoService.buscarDisciplinas().subscribe(res => {
-      this.disciplinas = res?.cont().
+    conexaoService.contarConexoes().subscribe(res => {
+      this.conexoes = res?.map(i=>{
+        return{
+          value: i.id,
+        }
+      })
 
     });
   }
 
-  conexoes : number = 1;
 
 }
