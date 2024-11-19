@@ -1,4 +1,5 @@
 import { ConexaoService } from './../../services/conexao.service';
+import { DisciplinaService } from './../../services/disciplina.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,13 +9,13 @@ import { Component } from '@angular/core';
 })
 export class LandingComponent {
 
+  conexoes : number =  0;
   constructor(private conexaoService: ConexaoService){
-    conexaoService.buscarDisciplinas().subscribe(res => {
-      this.disciplinas = res?.cont().
+    conexaoService.contarConexoes().subscribe(res => {
+      this.conexoes = res;
 
     });
   }
 
-  conexoes : number = 1;
 
 }

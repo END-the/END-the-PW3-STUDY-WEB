@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class EstudarComponent {
 
   disciplinas: any[] = [];
-  
+
   constructor(private disciplinaService: DisciplinaService){
     disciplinaService.buscarDisciplinas().subscribe(res => {
       this.disciplinas = res?.map(i=>{
