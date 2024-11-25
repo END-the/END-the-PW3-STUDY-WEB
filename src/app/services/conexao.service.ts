@@ -9,6 +9,7 @@ import { Conexao } from '../models/conexao';
 export class ConexaoService {
 
   apiUrl: string = 'http://localhost:8080/conexoes'
+  
   constructor(private HttpClient: HttpClient) { }
 
   contarConexoes(): Observable<number>{
