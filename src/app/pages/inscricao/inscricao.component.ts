@@ -17,7 +17,7 @@ export class InscricaoComponent {
       id: null,
       nome: [''],
       foto: [''],
-      whatsApp: [''],
+      whatsapp: [''],
       email: [''],
       conteudo: [''],
       disciplina: this._formBuilder.group({
@@ -66,7 +66,9 @@ export class InscricaoComponent {
     }
 
     onSalvar() {
-      let monitor : Monitor = this.monitorForm.value;
-      this.monitorService.inserir(monitor);
+      let monitor : Monitor = new Monitor();
+      this.monitorForm.value.disponibilidade = [];
+      monitor = Object.assign(monitor, this.monitorForm.value)
+      this.monitorService.inserir(monitor).subscribe(data => console.log(data));
     }
 }

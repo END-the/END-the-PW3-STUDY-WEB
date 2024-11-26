@@ -1,5 +1,5 @@
-export interface Disciplina {
-  id: number;
-  nome: string;
-  
+export class Disciplina {
+  id: number = 0;
+  nome: string = '';
+
 }

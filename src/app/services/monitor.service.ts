@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class MonitorService {
 
-  private URL: string = 'http://ocalhost:8080/monitores'
+  private URL: string = 'http://localhost:8080/monitores'
   constructor(private httpClient: HttpClient) { }
 
   inserir(monitor: Monitor):Observable<Monitor>{
